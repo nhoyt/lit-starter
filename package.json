@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "web-dev-server --open ./ --node-resolve",
+    "start:watch": "web-dev-server --open ./ --node-resolve --watch"
+  },
+  "dependencies": {
+    "lit": "^2.2.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.30",
+    "@web/dev-server-esbuild": "^0.2.16",
+    "rollup": "^2.69.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
