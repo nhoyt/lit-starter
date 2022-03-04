@@ -7,7 +7,7 @@ class MyElement extends LitElement {
 
   constructor() {
     super();
-    this.message = 'KSTaylor';
+    this.message = 'KST';
   }
 
   render() {

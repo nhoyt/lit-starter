@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "start": "web-dev-server --open ./ --node-resolve",
-    "start:watch": "web-dev-server --open ./ --node-resolve --watch"
+    "start": "web-dev-server --open ./ --node-resolve"
   },
   "dependencies": {
     "lit": "^2.2.0"
