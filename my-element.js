@@ -1,19 +1,45 @@
-import {LitElement, html} from 'lit';
+import {LitElement, html, css} from 'lit';
 
 class MyElement extends LitElement {
+
   static properties = {
-    message: {},
+    name: {},
   };
 
-  constructor() {
+  static styles = css`
+    p {
+      color: #333;
+    }
+    label, input {
+      font-size: 1rem;
+    }
+    input {
+      padding: 0.25rem;
+    }
+    .name {
+      font-weight: bold;
+      color: #555;
+    }
+  `;
+
+  constructor () {
     super();
-    this.message = 'KST';
+    this.name = '[your name here]';
   }
 
-  render() {
+  changeName (event) {
+    const input = event.target;
+    this.name = input.value;
+  }
+
+  render () {
     return html`
-      <p>Hello, ${this.message}!</p>
+      <p>Hello, my name is <span class="name">${this.name}</span></p>
+      <label>Name:
+        <input @input=${this.changeName} placeholder="Enter your name">
+      </label>
     `;
   }
 }
+
 customElements.define('my-element', MyElement);
